@@ -1,4 +1,4 @@
-# cmdX
+# echoCMD
 
 An AI tool that converts natural language instructions into shell commands for the command line interface (CLI).
 
