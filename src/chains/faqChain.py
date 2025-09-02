@@ -11,7 +11,7 @@ from langchain.prompts import (
 from langchain_core.output_parsers import StrOutputParser
 from langchain.schema.runnable import RunnablePassthrough
 from src.chains.config import CHAT_MODEL_NAME, TEMPLATE_STR
-from langchain_fireworks import Fireworks
+from langchain_fireworks import Fireworks, ChatFireworks
 
 setup_logging()
 dotenv.load_dotenv()

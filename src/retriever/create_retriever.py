@@ -34,7 +34,7 @@ class CreateRetriever:
 
     def get_retriever(self):
         retriever = self.vector_db.as_retriever(search_type="mmr", search_kwargs={"k": RETRIEVER_K})
-        compressor = CohereRerank()
+        compressor = CohereRerank(model="rerank-english-v2.0")
         logging.info("Cohere Reranking initialized")
         compression_retriever = ContextualCompressionRetriever(base_compressor=compressor, base_retriever=retriever)
         return compression_retriever

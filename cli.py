@@ -6,10 +6,13 @@ import shlex
 from prompt_toolkit.shortcuts import radiolist_dialog, message_dialog, input_dialog
 from prompt_toolkit.shortcuts.progress_bar import ProgressBar
 import requests
+import nest_asyncio
+nest_asyncio.apply()
+
 
 async def call_api(query: str):
     if query:
-        url = "http://0.0.0.0:8000/query-agent"
+        url = "http://127.0.0.1:8000/query-agent"
         with ProgressBar() as pb:
             for i in pb(range(100), label="Fetching response..."):
                 if i < 90:
